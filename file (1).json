@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/login",
+      "dest": "/auth/login.html"
+    },
+    {
+      "src": "/signup", 
+      "dest": "/auth/signup.html"
+    },
+    {
+      "src": "/dashboard",
+      "dest": "/auth/dashboard.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}

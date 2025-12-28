@@ -1,0 +1,6 @@
+/login /auth/login.html 200
+/signup /auth/signup.html 200
+/dashboard /auth/dashboard.html 200
+/pricing /pages/pricing.html 200
+/* /index.html 200
+``*
