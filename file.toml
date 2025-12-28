@@ -1,22 +1,95 @@
 [build]
   publish = "."
+  command = "echo 'Static site deployed'"
 
 [build.environment]
   NODE_VERSION = "18"
 
+# Redirect rules for SPA routing
+[[redirects]]
+  from = "/login"
+  to = "/auth/login.html"
+  status = 200
+
+[[redirects]]
+  from = "/signup"
+  to = "/auth/signup.html"
+  status = 200
+
+[[redirects]]
+  from = "/dashboard"
+  to = "/auth/dashboard.html"
+  status = 200
+
+[[redirects]]
+  from = "/pricing"
+  to = "/pages/pricing.html"
+  status = 200
+
+[[redirects]]
+  from = "/payment"
+  to = "/pages/payment.html"
+  status = 200
+
+# API redirects for future backend integration
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
 
+# Catch-all redirect for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security headers
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
+# Cache headers for static assets
 [[headers]]
   for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.jpeg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.woff2"
   [headers.values]
     Cache-Control = "public, max-age=31536000"

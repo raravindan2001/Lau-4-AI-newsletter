@@ -1,6 +1,14 @@
+# Auth pages
 /login /auth/login.html 200
 /signup /auth/signup.html 200
 /dashboard /auth/dashboard.html 200
+
+# Other pages
 /pricing /pages/pricing.html 200
+/payment /pages/payment.html 200
+
+# API routes (for future use)
+/api/* /.netlify/functions/:splat 200
+
+# SPA fallback
 /* /index.html 200
-``*

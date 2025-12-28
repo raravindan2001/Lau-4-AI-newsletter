@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - AI Insights Hub</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-page">
+        <div class="auth-container">
+            <div class="auth-brand">
+                <i class="fas fa-brain"></i>
+                <span>AI Insights Hub</span>
+            </div>
+            
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h1>Start Your Free Trial</h1>
+                    <p>Get 5 days of premium AI insights - no credit card required</p>
+                </div>
+                
+                <form class="auth-form" onsubmit="handleSignup(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="First Name" required>
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Last Name" required>
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="password" placeholder="Create Password" required>
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Select Your Industry</option>
+                            <option value="technology">Technology</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="finance">Finance</option>
+                            <option value="education">Education</option>
+                            <option value="consulting">Consulting</option>
+                            <option value="startup">Startup</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <i class="fas fa-building"></i>
+                    </div>
+                    
+                    <div class="terms-agreement">
+                        <label class="checkbox-container">
+                            <input type="checkbox" required>
+                            <span class="checkmark"></span>
+                            I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary full-width">
+                        <i class="fas fa-rocket"></i>
+                        Start Free Trial
+                    </button>
+                </form>
+                
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="/login">Sign in</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../assets/js/auth.js"></script>
+</body>
+</html>
