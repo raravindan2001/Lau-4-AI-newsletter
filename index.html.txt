@@ -1,0 +1,67 @@
+<!-- Enhanced News Section -->
+<section class="news-section" id="news">
+    <div class="container">
+        <!-- Content Gate for Non-logged Users -->
+        <div id="content-gate" class="content-gate" style="display: none;">
+            <div class="gate-message">
+                <i class="fas fa-lock" style="font-size: 3rem; color: #10b981; margin-bottom: 1rem;"></i>
+                <h3>🔓 Unlock Live AI News Feed</h3>
+                <p>Get real-time updates from 50+ premium AI sources including OpenAI, Google AI, MIT Tech Review, and more.</p>
+                
+                <div class="stats-preview">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">AI Sources</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Live Updates</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1h</span>
+                        <span class="stat-label">Refresh Rate</span>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2rem;">
+                    <a href="/signup" class="btn-primary btn-large">
+                        <i class="fas fa-rocket"></i> Start Free Trial
+                    </a>
+                    <a href="/login" class="btn-outline">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live News Content -->
+        <div class="news-header" style="text-align: center; margin-bottom: 3rem;">
+            <h2>🔴 Live AI News Feed</h2>
+            <p>Real-time updates from the top 50 AI websites worldwide</p>
+            
+            <div id="live-stats" class="hero-stats" style="margin: 2rem 0;">
+                <!-- Stats will be populated by JavaScript -->
+            </div>
+            
+            <div id="last-updated" class="text-center" style="color: #94a3b8; font-size: 0.9rem;">
+                <!-- Last updated time will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="news-filters">
+            <button class="filter-btn active" onclick="filterNews('all')">All Sources</button>
+            <button class="filter-btn" onclick="filterNews('news')">News</button>
+            <button class="filter-btn" onclick="filterNews('discussion')">Discussions</button>
+            <button class="filter-btn" onclick="filterNews('tech')">Tech</button>
+        </div>
+
+        <!-- News Grid -->
+        <div id="news-grid" class="news-grid">
+            <!-- News items will be populated by JavaScript -->
+        </div>
+    </div>
+</section>
+
+<!-- Add before closing </body> tag -->
+<script src="assets/js/content-aggregator.js"></script>
